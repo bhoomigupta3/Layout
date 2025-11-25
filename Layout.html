@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-areas: "header header header" "menu main ad1" "ad2 main ad1" "footer footer footer";
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: auto 1fr 1fr auto;
+            gap: 10px;
+            height: 100vh;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        
+        header {
+            grid-area: header;
+            background: #1e90ff;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        nav {
+            grid-area: menu;
+            background: #4682b4;
+            color: white;
+            padding: 20px;
+        }
+        
+        main {
+            grid-area: main;
+            background: #87ceeb;
+            padding: 20px;
+        }
+        
+        .ad1 {
+            grid-area: ad1;
+            background: #5f9ea0;
+            color: white;
+            padding: 20px;
+        }
+        
+        .ad2 {
+            grid-area: ad2;
+            background: #20b2aa;
+            color: white;
+            padding: 20px;
+        }
+        
+        footer {
+            grid-area: footer;
+            background: #1e90ff;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>Header</header>
+        <nav>Menu</nav>
+        <main>Main</main>
+        <div class="ad1">Ad1</div>
+        <div class="ad2">Ad2</div>
+        <footer>Footer</footer>
+    </div>
+</body>
+
+</html>
